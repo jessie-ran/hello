@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">hello</string>
+    <string name="et_1">please input number</string>
+    <string name="tishi">温度转化器</string>
+    <string name="bton1">转化为华氏摄氏度</string>
+    <string name="result">转化结果为</string>
+    <string name="t1">HELLO</string>
+    <string name="t2">TeamA</string>
+    <string name="t3">0</string>
+    <string name="b1">+3 POINTS</string>
+    <string name="b2">+2 POINTS</string>
+    <string name="b3">+1 POINTS</string>
+    <string name="b4">RESET</string>
+    <string name="bn">next</string>
+</resources>
