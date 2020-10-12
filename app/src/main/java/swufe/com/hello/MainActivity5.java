@@ -16,6 +16,7 @@ public class MainActivity5 extends AppCompatActivity {
     EditText a11;
     EditText a22;
     EditText a33;
+    String date_run="0000-00-00 00:00:00";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +31,7 @@ public class MainActivity5 extends AppCompatActivity {
         */
         //上面是用一个仓库里面得到的
         //下面就应该是从xml文件里面得到的
-        SharedPreferences sharedPreferences = getSharedPreferences("myrate", Activity.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("myrate_1", Activity.MODE_PRIVATE);
         PreferenceManager.getDefaultSharedPreferences(this);
         float a1= sharedPreferences.getFloat("dollar_rate",0.0f);
         float a2 = sharedPreferences.getFloat("euro_rate",0.0f);
@@ -88,7 +89,7 @@ public class MainActivity5 extends AppCompatActivity {
         float newe=Float.parseFloat(str2);
         float neww=Float.parseFloat(str3);
         Intent intent=getIntent();
-        SharedPreferences sp = getSharedPreferences("myrate",Activity.MODE_PRIVATE);
+        SharedPreferences sp = getSharedPreferences("myrate_1",Activity.MODE_PRIVATE);
         SharedPreferences.Editor editor = sp.edit();
         editor.putFloat("dollar_rate",newd);
         editor.putFloat("euro_rate",newe);
