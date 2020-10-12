@@ -14,6 +14,7 @@ public class MainActivity2 extends AppCompatActivity {
     Button b2;
     Button b3;
     TextView tx;
+    Button btn1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +23,7 @@ public class MainActivity2 extends AppCompatActivity {
         b2=findViewById(R.id.button3);
         b3=findViewById(R.id.button4);
         tx=findViewById(R.id.textView5);
-        @SuppressLint("WrongViewCast") Button btn1 = (Button)findViewById(R.id.b5);
+        btn1=findViewById(R.id.button5);
         btn1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

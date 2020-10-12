@@ -39,22 +39,31 @@ public class MainActivity6 extends ListActivity implements Runnable{
         for (int i = 1; i < 100; i++) {
             list1.add("item" + i);
         }
-     //  String[] list_data = {"one", "two", "three", "four"};
-      //  ListAdapter adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list_data);
-      //  setListAdapter(adapter);
-        //上面是第一种listview的创建方
-        //接下来是爬取网页数据然后展示
-        Thread t = new Thread(this);
-        t.start();
+      /* String[] list_data = {"one", "two", "three", "four"};
+       ListAdapter adapter = new ArrayAdapter<String>(this,
+        android.R.layout.simple_list_item_1, list_data);
+        setListAdapter(adapter);
+
+       */
+        //上面是第一种listview的创建方法，主要是展示静态数据
+        //接下来是爬取网页数据然后展示,首先应该把爬取回来的信息转化为字符串数组保存在list2
+       Thread t1= new Thread(this);
+        t1.start();
        // 获取网络数据,获取网路数据是在子线程中获取的
         handler = new Handler()
         {
             @Override
             public void handleMessage(Message msg) {
-                if(msg.what==5){
-                List<String> list2 = (List<String>) msg.obj;
+                if(msg.what==7){
+                    String ran_gaigai=(String)msg.obj;
+                    //处理字符串将其转化为字符串数组
+
+                    String[] gaigai=ran_gaigai.split(",");
+
+                    //之前的致命异常在这里，没有办法将String类型转化为list类型
+               // List<String> list2 = (List<String>) msg.obj;
                 ListAdapter adapter = new ArrayAdapter<String>(MainActivity6.this,
-                        android.R.layout.simple_list_item_1,list2);
+                        android.R.layout.simple_list_item_1,gaigai);
                 setListAdapter(adapter);
                 }
                 super.handleMessage(msg);
@@ -64,7 +73,6 @@ public class MainActivity6 extends ListActivity implements Runnable{
     @Override
     public void run() {
         URL url = null;
-//            }
         String myre = null;
         try {
             url = new URL("https://www.usd-cny.com/bankofchina.htm");
@@ -82,7 +90,7 @@ public class MainActivity6 extends ListActivity implements Runnable{
         }
         //解析网页中的数据，我看是网页先输入，然后在解析
         //解析内容也要写在run函数里面吗
-        Message msg = handler.obtainMessage(5);
+        Message msg = handler.obtainMessage(7);
         msg.obj =myre;
         handler.sendMessage(msg);
 
@@ -100,25 +108,38 @@ public class MainActivity6 extends ListActivity implements Runnable{
         }
         return out.toString();
     }
+
+    //我本来是想写成返回字符串函数，但是好多知识忘记了，所以干脆返回字符串，用“，”划分，返回后再处理
     public  String useJsoup(String str) {
         //先把他解析为老师的样子
         //要用list<string>
         Document doc = Jsoup.parse(str);
         Elements trs = doc.select("table").get(0).select("tr");
         //接下来写一个for循环得到一个string 数组
-        // String[]  myre;
+
         //首先是获取长度，先获得
         int tablelen = 0;
         String cou = "ran";
         String huil = "ran";
+       String myre=null;
         //  tablelen=trs.
         //一共是有28行Table表
-        //for(int i=1;i<28;i++){
-        Elements t1 = trs.get(1).select("td");
-        cou = t1.get(1).text();
-        huil = t1.get(5).text();
-        String myre = cou + "==>" + huil;
-        //  }
+        for(int i=1;i<28;i++) {
+            Elements t1 = trs.get(i).select("td");
+            cou = t1.get(0).text();
+
+            huil = t1.get(5).text();
+            //直接汇率和间接汇率的转化
+            float bw=100f/Float.parseFloat(huil);
+            String er=bw+"";
+            if (i == 1) {
+                String mt = cou + "==>" + er;
+                myre = mt;
+            } else {
+                String mt = cou+ "==>" + er;
+                myre = myre + "," + mt;
+            }
+        }
         return myre;
     }
 
