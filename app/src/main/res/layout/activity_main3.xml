@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/div1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F8FA"
+    android:orientation="vertical"
+    tools:context=".MainActivity3">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#3F51B5"
+        android:text="@string/t1"
+        android:textSize="40sp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="259dp"
+            android:layout_height="71dp"
+            android:layout_marginBottom="30dp"
+            android:text="@string/re"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="155dp"
+            android:layout_height="72dp"
+            android:gravity="center"
+            android:text="@string/t2"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/divider3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tbs"
+            android:layout_width="99dp"
+            android:layout_height="99dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/tbs"
+            android:textSize="70sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ba2"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="182dp"
+            android:layout_height="72dp"
+            android:gravity="center"
+            android:text="@string/tb"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/divider3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/bb2"
+            android:layout_width="130dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#EFA437"
+            android:onClick="twob"
+            android:text="@string/ba2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/divider3"
+            app:layout_constraintTop_toBottomOf="@+id/bb1" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="left" />
+
+        <Button
+            android:id="@+id/ba2"
+            android:layout_width="130dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#EFA437"
+            android:onClick="twoa"
+            android:text="@string/ba2"
+            app:layout_constraintEnd_toStartOf="@+id/divider3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ba1" />
+
+        <Button
+            android:id="@+id/ba1"
+            android:layout_width="130dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#EFA437"
+            android:onClick="threea"
+            android:text="@string/ba1"
+            app:layout_constraintEnd_toStartOf="@+id/divider3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tas" />
+
+        <Button
+            android:id="@+id/bb1"
+            android:layout_width="130dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#EFA437"
+            android:onClick="threeb"
+            android:text="@string/ba1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/divider3"
+            app:layout_constraintTop_toBottomOf="@+id/tbs" />
+
+        <Button
+            android:id="@+id/ba3"
+            android:layout_width="130dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#EFA437"
+            android:onClick="onea"
+            android:text="@string/ba3"
+            app:layout_constraintEnd_toStartOf="@+id/divider3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ba2" />
+
+        <Button
+            android:id="@+id/bb3"
+            android:layout_width="130dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#EFA437"
+            android:onClick="oneb"
+            android:text="@string/ba3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/divider3"
+            app:layout_constraintTop_toBottomOf="@+id/bb2" />
+
+        <TextView
+            android:id="@+id/tas"
+            android:layout_width="99dp"
+            android:layout_height="99dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/tas"
+            android:textSize="70sp"
+            app:layout_constraintEnd_toStartOf="@+id/divider3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="1dp"
+            android:layout_height="1599dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="1dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

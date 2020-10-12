@@ -1,5 +1,5 @@
 package swufe.com.hello;
-
+//摄氏度转化器
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;

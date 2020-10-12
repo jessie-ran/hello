@@ -12,4 +12,26 @@
     <string name="b3">+1 POINTS</string>
     <string name="b4">RESET</string>
     <string name="bn">next</string>
+    <string name="tb">TeamB</string>
+    <string name="tas">0</string>
+    <string name="tbs">0</string>
+    <string name="ba1">+3 POINTS</string>
+    <string name="ba2">+2  POINTS</string>
+    <string name="ba3">+1  POINTS</string>
+    <string name="re">RESERT</string>
+    <string name="huilu">在线汇率转换器</string>
+    <string name="shuru">请输入金额</string>
+    <string name="zhuanhua">转算为</string>
+    <string name="kaishi">开始换算</string>
+    <string name="jieguo">转换结果为：</string>
+    <string name="dollar">dollar</string>
+    <string name="euro">EURO</string>
+    <string name="title">在线汇率转化初模型</string>
+    <string name="tishi1">请输入转化金额</string>
+    <string name="EURO">EURO</string>
+    <string name="WON">WON</string>
+    <string name="next">NEXT</string>
+    <string name="re1">更改之后保存</string>
+    <string name="bnews">打开京东</string>
+    <string name="liebiao">列表</string>
 </resources>
