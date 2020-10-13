@@ -57,7 +57,7 @@ public class MainActivity4 extends AppCompatActivity implements Runnable {
     String last_time1=null;
     String date_run="0000-00-00 00:00:00";
     Handler handler;
-//我也不知道下面为啥要加这个东西
+    //我也不知道下面为啥要加这个东西
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
