@@ -27,7 +27,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.jsoup.nodes.Document.OutputSettings.Syntax.html;
-
+//使用列表进行汇率的展示
+//可运行
 public class MainActivity6 extends ListActivity implements Runnable{
     Handler handler;
     @Override
@@ -64,7 +65,7 @@ public class MainActivity6 extends ListActivity implements Runnable{
                // List<String> list2 = (List<String>) msg.obj;
                 ListAdapter adapter = new ArrayAdapter<String>(MainActivity6.this,
                         android.R.layout.simple_list_item_1,gaigai);
-                setListAdapter(adapter);
+               setListAdapter(adapter);
                 }
                 super.handleMessage(msg);
             }
