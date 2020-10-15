@@ -273,7 +273,7 @@ public class MainActivity4 extends AppCompatActivity implements Runnable {
        // Document doc = Jsoup.parse(html);
 
     }
-
+//
     //这里就应该是解析网页
     public void useJsoup(String str){
         Document doc =Jsoup.parse(str);

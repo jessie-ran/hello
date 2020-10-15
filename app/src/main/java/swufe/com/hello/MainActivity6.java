@@ -58,7 +58,7 @@ public class MainActivity6 extends ListActivity implements Runnable{
                 if(msg.what==7){
                     String ran_gaigai=(String)msg.obj;
                     //处理字符串将其转化为字符串数组
-
+//
                     String[] gaigai=ran_gaigai.split(",");
 
                     //之前的致命异常在这里，没有办法将String类型转化为list类型

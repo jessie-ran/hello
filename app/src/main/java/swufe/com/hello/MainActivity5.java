@@ -27,7 +27,7 @@ public class MainActivity5 extends AppCompatActivity {
        float a1=bundle.getFloat("b1",0.0f);
         float a2=bundle.getFloat("b2",0.0f);
         float a3=bundle.getFloat("b3",0.0f);
-
+//
         */
         //上面是用一个仓库里面得到的
         //下面就应该是从xml文件里面得到的

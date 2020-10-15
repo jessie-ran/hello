@@ -31,7 +31,7 @@ public class MainActivity10 extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
             }
-
+//
             @Override
             public void afterTextChanged(Editable s) {
                 TextView show=(TextView)MainActivity10.this.findViewById(R.id.show);

@@ -39,7 +39,7 @@ public class MainActivity7 extends ListActivity implements Runnable {
     Handler handler;
     private ArrayList<HashMap<String, String>> listItems;
     private SimpleAdapter listItemAdapter; // 适配器
-
+//
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

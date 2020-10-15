@@ -30,7 +30,7 @@ public class MyAdapter extends ArrayAdapter {
 //position:当前位置,根据不同的position返回不同的view
 // convertView：当前控件
 // parent：父类控件
-
+//
         View itemView = convertView;  //用于显示每一行的数据
         if(itemView == null){
             itemView = LayoutInflater.from(getContext()).inflate(R.layout.hangbuju1,

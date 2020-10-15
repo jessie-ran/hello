@@ -188,7 +188,7 @@ public class MainActivity9 extends  AppCompatActivity implements Runnable,Adapte
         String title2=String.valueOf(title.getText());
         String detail2=String.valueOf(detail.getText());
 
-
+//
 
     //打开新的界面，传递参数
        Intent  intent=new Intent(this,MainActivity10.class);
