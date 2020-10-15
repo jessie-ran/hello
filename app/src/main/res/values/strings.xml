@@ -34,4 +34,6 @@
     <string name="re1">更改之后保存</string>
     <string name="bnews">打开京东</string>
     <string name="liebiao">列表</string>
+    <string name="funny">没有提取到国家的名字</string>
+    <string name="dis_re">转化结果为：</string>
 </resources>
